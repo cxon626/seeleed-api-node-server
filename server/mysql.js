@@ -1,5 +1,5 @@
 var mysql = require('mysql');
-var models = require('../db');
+var models = require('./db');
 
 var pool = mysql.createPool(models.mysql);
 

@@ -1,5 +1,5 @@
-const twVisa = require('./api/twVisa');
-// const fetchTwVisa = require('./fetch/twVisa')
+const apis = require('./api/index');
+const bugs = require('./fetch/index')
 const fs = require('fs');
 const path = require('path');
 const bodyParser = require('body-parser');
@@ -20,8 +20,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
 // 后端api路由
-app.use('/api', twVisa);
-// app.use('/set', fetchTwVisa);
+app.use('/apis', apis);
+app.use('/bugs', bugs);
 
 // 监听端口
 app.listen(5626);
