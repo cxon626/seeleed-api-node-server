@@ -3,16 +3,13 @@ var https = require('https')
 var $sql = require('../sqlMap')
 var $query = require('../mysql')
 
-// var url = "pb.immigration.gov.tw"
-var url = "www.baidu.com"
-
 var options = {
-  hostname: url,
+  hostname: "pb.immigration.gov.tw",
   port: 443,
-  // path: "/viewDailyQuota/firstKindDailyQuota",
-  path: "/",
+  path: "https://pb.immigration.gov.tw/viewDailyQuota/firstKindDailyQuota",
   method: "GET",
   headers: {
+    'Host': 'pb.immigration.gov.tw',
     'Connection': 'keep-alive',
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
     'Upgrade-Insecure-Requests': '1',
